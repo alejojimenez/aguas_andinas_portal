@@ -32,15 +32,29 @@ if __name__ == '__main__':
     scraper = Scraper_Aguas(url, email, password, driver_path)
     #Primera sociedad
     print('hacemos login')
+    print('----------------------------------------------------------------------')
+    
     scraper.login()
     print('hacemos scrapping')
+    print('----------------------------------------------------------------------')
+    
     scraper.scrapping_aguas(posicion=0)
     scraper.close()
     
     #Segunda sociedad
     print('hacemos login')
+    print('----------------------------------------------------------------------')
+    
     scraper.login()
     print('hacemos scrapping')
+    print('----------------------------------------------------------------------')
+    
     scraper.scrapping_aguas(posicion=1)
     print('cerramos')
+    print('----------------------------------------------------------------------')
+    
+    scraper.archivos()
+    print('procesando datos hacia Planilla Formato')
+    print('----------------------------------------------------------------------')
+    
     scraper.close()
