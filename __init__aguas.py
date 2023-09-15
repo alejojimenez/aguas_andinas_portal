@@ -31,26 +31,31 @@ if __name__ == '__main__':
     
     scraper = Scraper_Aguas(url, email, password, driver_path)
     #Primera sociedad
-    print('hacemos login')
+    print('ingresamos en la clase Scraper_Aguas...')
     print('----------------------------------------------------------------------')
     
     scraper.login()
-    print('hacemos scrapping')
+    print('hacemos login en el portal...')
     print('----------------------------------------------------------------------')
     
     scraper.scrapping_aguas(posicion=0)
+    print('hacemos scrapping al portal 1era sociedad...')
+    print('----------------------------------------------------------------------')
+
     scraper.close()
+    print('cerramos el bot 1era parte...')
+    print('----------------------------------------------------------------------')
     
     #Segunda sociedad
-    print('hacemos login')
+    print('segunda sociendad...')
     print('----------------------------------------------------------------------')
     
     scraper.login()
-    print('hacemos scrapping')
+    print('hacemos login nuevamente en el portal...')
     print('----------------------------------------------------------------------')
     
     scraper.scrapping_aguas(posicion=1)
-    print('cerramos')
+    print('hacemos scrapping al portal 2da. sociedad...')
     print('----------------------------------------------------------------------')
     
     scraper.archivos()
@@ -58,3 +63,5 @@ if __name__ == '__main__':
     print('----------------------------------------------------------------------')
     
     scraper.close()
+    print('cerramos el bot final...')
+    print('----------------------------------------------------------------------')
